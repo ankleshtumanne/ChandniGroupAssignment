@@ -70,7 +70,7 @@ namespace B2BManagement.Repository
                 Guests = dto.Guests,
                 TotalPrice = dto.TotalPrice,
                 BookingStatus = "Confirmed",
-                APIResponse = "{}",
+                APIResponse = AppConstant.BookingCreated,
                 CreatedOn = DateTime.UtcNow
             };
             _context.HotelBookings.Add(booking);
