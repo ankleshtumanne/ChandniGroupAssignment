@@ -4,10 +4,8 @@ using B2BManagement.DTOs;
 using B2BManagement.Models;
 using B2BManagement.Repository.Interfaces;
 using Microsoft.EntityFrameworkCore;
-//using Newtonsoft.Json;
 using System.Text;
 using System.Security.Cryptography;
-//using Azure.Core;
 using B2BManagement.Helpers;
 using System.Text.Json;
 namespace B2BManagement.Repository
@@ -30,7 +28,6 @@ namespace B2BManagement.Repository
                 .AsNoTracking()
                 .FirstOrDefaultAsync(b => b.BookingID == bookingId);
         }
-
         public async Task<object> SearchHotelsAsync(HotelSearchDto dto)
         {
             if (dto == null)
@@ -53,8 +50,7 @@ namespace B2BManagement.Repository
                 return new { success = false, message = AppConstant.HotelConfigurationMissing };
 
             try
-            {
-    
+            {   
                 var timestamp = DateTimeOffset.UtcNow.ToUnixTimeSeconds().ToString();
                 var signatureRaw = apiKey + secret + timestamp;
                 using var sha256 = SHA256.Create();
