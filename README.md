@@ -121,8 +121,8 @@ POST /api/auth/register
 {
   "companyName": "TravelWorld Pvt Ltd",
   "contactPerson": "John Doe",
-  "email": "john@travelworld.com",
-  "password": "Password@123",
+  "email": "anku@gmail.com",
+  "password": "123",
   "phone": "9876543210"
 }
 Login Agent
