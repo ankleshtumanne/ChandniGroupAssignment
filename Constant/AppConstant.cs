@@ -15,6 +15,7 @@
         
         public const string BookingCreated = "Hotel booking created successfully.";
         public const string CheckingOut = "Check-out must be after check-in.";
+        public const string CheckingIn = "Check-out must be after check-in.";
         public const string GuestRequired = "At least one guest is required.";
         public const string BookingNotFound = "Booking not found.";
         public const string InvalidBookingRequest = "Invalid booking request.";
@@ -38,5 +39,13 @@
         public const string Authorization = "Authorization";
         public const string Bearer = "Bearer";
         public const string EnterJWt = "Enter JWT token only (without Bearer)";
+
+
+        public const string ErrorOcured = "An error occurred while searching hotels.";
+        public const string HotelConfigurationMissing = "HotelBeds configuration missing.";
+        
+
+
+
     }
 }

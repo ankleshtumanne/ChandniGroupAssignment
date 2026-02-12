@@ -16,9 +16,9 @@ namespace B2BManagement.Controllers
             _hotelService = hotelService;
         }
 
-        [HttpPost("search")]
-        [AllowAnonymous]
-        public async Task<IActionResult> Search([FromBody] HotelSearchDto dto)
+        [HttpGet("search")]
+        
+        public async Task<IActionResult> Search([FromQuery] HotelSearchDto dto)
         {
             var result = await _hotelService.SearchHotelsAsync(dto);
             return Ok(result);
